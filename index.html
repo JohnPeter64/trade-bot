@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My Trade Bot (Paper mode)</title>
+<style>
+  :root { --bg:#0b1020; --fg:#eef2ff; --muted:#a9b4ff; }
+  @media (prefers-color-scheme: light) { :root { --bg:#0b1020; --fg:#eef2ff; --muted:#a9b4ff; } }
+  html, body { margin:0; min-height:100%; background:var(--bg); color:var(--fg);
+    font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif; }
+  main { max-width:560px; margin:0 auto; padding:24px 16px 120px; }
+  h1 { font-size:1.2rem; margin:0 0 6px; }
+  p { color:var(--muted); font-size:.9rem; line-height:1.5; }
+</style>
+</head>
+<body>
+<main>
+  <h1>My Trade Bot</h1>
+  <p>Practice tool running on live Deriv market data in <b>Paper mode</b> (simulated trades, no money involved).
+     Drag the panel by its header, resize it from the bottom-right corner.</p>
+  <p id="dtb-missing" style="display:none;color:#ff8a8a">
+     bot.js was not found. Save your script as <b>bot.js</b> in the same folder as this page.</p>
+</main>
+
+<!-- Your userscript, saved unchanged as bot.js. The ==UserScript== header is just comments, so it is harmless here. -->
+<script src="bot.js" onerror="document.getElementById('dtb-missing').style.display='block'"></script>
+</body>
+</html>
